@@ -1,0 +1,20 @@
+{
+  "name": "tubes",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.3"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.0"
+  },
+  "description": ""
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">   
+        <link rel="stylesheet" href="app/styles/main.css">
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="app/modules/app.module.js"></script>
+        <script src="app/modules/search-bar/search.controller.js"></script>
+        <script src="app/modules/services/tube.service.js"></script>
+        <script src="app/modules/video-page/video.controller.js"></script>
+        <script src="app/modules/video-page/single.controller.js"></script>
+    </head>
+    <body >
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <p>Angular Tube App</p>
+                    </a>
+                </div>
+                <form class="navbar-form navbar-left" role="search" ng-controller="search.controller"   >
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search for Videos" ng-model="srch">
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="setSearch(srch)">Submit</button>
+                </form>
+            </div>
+        </nav>
+        
+        
+        
+        <div class="container-fluid">
+        
+        <ui-view></ui-view>
+    
+    
+        </div>
+    </body>
+</html>

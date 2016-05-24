@@ -1,0 +1,57 @@
+
+    <div class="row" >
+        <div class="col-md-12">
+            <h1>Your searched for {{searched}}</h1>
+        </div>
+    </div>
+    
+    <div *ngIf="!vidLink">
+    
+    <div class="row" *ngFor="#vid of videos">
+        
+        <div class="col-md-1">
+            <img class="thumbnail" src="{{vid.snippet.thumbnails.default.url}}" on-click="vidSelect(vid.id.videoId)">
+        </div>
+        <div class="col-sm-11">
+            <h3>{{vid.snippet.title}}</h3>
+            <div class="row">
+                <div class="col-sm-11">
+                    <p>{{vid.snippet.description}}</p>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    </div>
+    
+    
+<div class="row" *ngIf="vidLink">
+
+    <div class="col-md-12">
+        <iframe height="390" width="640" src={{vidLink}} frameborder="0"></iframe>
+    </div>
+    
+    <div class="col-md-12">
+        <div (click)="goBack()"><h3>Go back</h3></div>    
+    </div>
+
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

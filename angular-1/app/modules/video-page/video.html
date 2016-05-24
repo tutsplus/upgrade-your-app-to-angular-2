@@ -1,0 +1,42 @@
+<div class="container-fluid" ng-controller = "video.controller" ng-init = "getVideos()">
+    <div class="row" >
+        <div class="col-md-12">
+            <h1>You searched for {{srchString}}</h1>
+        </div>
+    </div>
+    
+    
+    <div class="row" ng-repeat="vid in videos">
+        <a ui-sref = "single({id:vid.id})"> 
+        <div class="col-md-1">
+            <img class="thumbnail" src="{{vid.thumbnail}}">
+        </div>
+        <div class="col-sm-11">
+            <h3>{{vid.title}}</h3>
+            <div class="row">
+                <div class="col-sm-11">
+                    <p>{{vid.description}}</p>
+                </div>
+                
+            </div>
+        </div>
+        </a>
+    </div>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
