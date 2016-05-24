@@ -13,7 +13,7 @@ export class YtubeService {
 
     private tubeURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=';
 
-    private APIkey ='AIzaSyB7QJTXh6LO-7b8Kv4vbdIT-cbgKgHByUY';
+    private APIkey =''; // Your API key goes here
     
     setSearch(str: string) {
         this.srch = str;  
